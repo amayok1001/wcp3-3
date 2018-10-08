@@ -31,3 +31,7 @@ Things you may want to cover:
         params.require(:model).permit(:カラム名1, :カラム名....)
 
 
+## ツール
+### gem(ジェム)
+    画像投稿機能 gem 'refile'
+    
