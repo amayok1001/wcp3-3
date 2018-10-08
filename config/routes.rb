@@ -6,5 +6,8 @@ Rails.application.routes.draw do
   # /topというURLにアクセスしたときに、rootコントローラのtopアクションが呼び出される
   post '/posts' => 'posts#create'
   #<form>でデータを送信して画面遷移する場合にpostを使う
-  
+  get '/posts' => 'posts#index'
+  # /postsというURLでpostsコントローラのindexアクションを実行
+  get '/posts/:id' => 'posts#show' , as: 'post'
+  # 投稿1件ごとの詳細を表示する
 end

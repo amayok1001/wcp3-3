@@ -11,6 +11,12 @@ class PostsController < ApplicationController
     # トップ画面へリダイレクト
       redirect_to '/top'
   end
+  def index
+      @posts = Post.all
+  end
+  def show
+  end
+
     #privateと書くとアクションとして認識されない
     #Controllerファイルの一番下、endのすぐ上に書く
     private
