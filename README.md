@@ -22,3 +22,12 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## マスアサインメント脆弱性
+    https://qiita.com/tbpgr/items/63028f5e19a2d1617e40
+    ⇨ Railsではこれを防ぐための「ストロングパラメータ」という仕組   みがある
+    ＊ストロングパラメータのコード
+    　def post_params
+        params.require(:model).permit(:カラム名1, :カラム名....)
+
+
