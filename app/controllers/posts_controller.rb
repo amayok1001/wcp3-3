@@ -25,6 +25,11 @@ class PostsController < ApplicationController
         post.update(post_params)
         redirect_to post_path(post.id)
   end
+  def destroy
+        post = Post.find(params[:id])
+        post.destroy
+        redirect_to posts_path
+  end
     #privateと書くとアクションとして認識されない
     #Controllerファイルの一番下、endのすぐ上に書く
     private
