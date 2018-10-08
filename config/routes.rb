@@ -10,4 +10,7 @@ Rails.application.routes.draw do
   # /postsというURLでpostsコントローラのindexアクションを実行
   get '/posts/:id' => 'posts#show' , as: 'post'
   # 投稿1件ごとの詳細を表示する
+  get '/posts/:id/edit' => 'posts#edit', as: 'edit_post'
+  # 編集ページを表示する
+  patch '/posts/:id' => 'posts#update', as: 'update_post'
 end
